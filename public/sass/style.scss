@@ -1,0 +1,371 @@
+@import "compass";
+$hot-yellow: #FFF345;
+$alternative-yellow: #F2FF82;
+$active-tab-bg: rgb(13, 53, 56);
+$completed-gray-text: rgba(67, 61, 61, 0.7);
+$completed-gray-container: rgba(245, 245, 245, 0.85);
+/* text-align class shortcut */
+
+.t_a_c {
+    text-align: center;
+}
+body {
+    background: url("../../images/wood-texture.png") !important;
+    width: auto;
+    height: auto;
+}
+.pretty-header-container {
+    margin: 0px auto;
+    width: auto;
+    max-width: 800px;
+    height: auto;
+    background: rgba(0, 0, 0, 0.3);
+    @include border-radius(4px);
+    @include box-shadow(0px 3px 5px 2px);
+}
+.todo-list-container {
+    margin: 0px auto;
+    width: auto;
+    max-width: 800px;
+}
+.todo-remove {
+    margin: 0px;
+    width: 28px;
+    height: 26px;
+    border: 2px solid #ccc;
+    @include box-shadow(0px 0px 5px #000);
+    border-radius: 4px;
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    background: rgba(0, 0, 0, 0.4);
+    @include transition(box-shadow 0.2s ease-out);
+}
+.todo-complete {
+    margin: 0px;
+    width: 28px;
+    height: 26px;
+    border: 2px solid #ccc;
+    @include box-shadow(0px 0px 5px #000);
+    @include border-radius(4px);
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    background: rgba(0, 0, 0, 0.4);
+    @include transition(box-shadow 0.2s ease-out);
+    right: 42px!important;
+    > i {
+        left: 1px;
+    }
+}
+.todo-remove:hover, .todo-complete:hover {
+    cursor: pointer;
+    @include box-shadow(none);
+}
+.check-all-todos .remove-all-todos {
+    i {
+        font-size: 18px;
+    }
+}
+.todo-remove, .todo-complete {
+    i {
+        color: #FFF;
+        font-size: 19px;
+        position: relative;
+        top: -7px;
+        left: 0px;
+    }
+}
+.todo-list {
+    position: relative;
+    min-height: 48px;
+    height: auto;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    @include border-radius(4px);
+    @include box-shadow(0px 0px 8px rgba(33, 33, 33, 0.7));
+}
+.todo-item {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    @include border-radius(4px);
+    line-height: 37px;
+    border: 3px solid;
+    border-color: rgba(224, 216, 216, 0.2);
+    @include box-shadow(-1px 0px 5px #b4b4b4 inset);
+    margin: 2px 6px;
+    &.completed {
+        background: $completed-gray-container;
+    }
+    &.first {
+        margin-top: 34px;
+    }
+    > div {
+        outline: none;
+    }
+}
+.pretty-header {
+    font-family: "Oswald", Verdana, Helvetica, sans-serif;
+}
+.pretty-header {
+    text-align: center;
+    color: rgb(153, 219, 239);
+    @include text-shadow(4px 1px 3px rgba(66, 66, 66, 0.5));
+    &::selection {
+        background: rgba(255, 255, 255, 0.5);
+    }
+}
+.delete-checkbox {
+    position: absolute;
+    width: 40px;
+    background: rgb(153, 219, 239);
+    margin-top: 12px!important;
+    > input {
+        margin: 0 auto;
+        position: relative;
+        left: 13px;
+        top: 0px;
+    }
+}
+input.add-todo {
+    margin: 15px 0px!important;
+    height: 37px!important;
+    background: rgba(0, 0, 0, 0.2) !important;
+    color: #FFF!important;
+    font-size: 18px!important;
+}
+/* .todo-item::before {
+    margin: 0px;
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background: rgb(153, 219, 239);
+    -webkit-box-shadow: -1px 0px 25px rgba(0,0,0,0.3) inset;
+    -moz-box-shadow: -1px 0px 25px rgba(0,0,0,0.3) inset;
+    -ms-box-shadow: -1px 0px 25px rgba(0,0,0,0.3) inset;
+    -o-box-shadow: -1px 0px 25px rgba(0,0,0,0.3) inset;
+    box-shadow: -1px 0px 25px rgba(0,0,0,0.3) inset;
+} */
+
+.todo {
+    @include user-select(text);
+    @include box-sizing(border-box);
+    color: #5e5e5e;
+    padding-left: 50px;
+    display: inline-block;
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    &.completed {
+        text-decoration: line-through;
+        color: $completed-gray-text;
+        margin-left: -75px;
+    }
+}
+.todo-filter-tab {
+    .fa-list-alt, .fa-check {
+        position: relative;
+        left: 3px;
+    }
+}
+.add-todo::selection, .todo::selection {
+    background: rgba(18, 233, 154, 0.5);
+}
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    
+    color: rgba(255, 255, 255, 0.8);
+}
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 1;
+}
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 1;
+}
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    
+    color: rgba(255, 255, 255, 0.8);
+}
+input {
+    &[type="checkbox"] {
+        display: none;
+    }
+    &[type=checkbox].css-checkbox {
+        position: absolute;
+        z-index: -1000;
+        left: -1000px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        + label.css-label {
+            padding-left: 25px;
+            height: 20px;
+            display: inline-block;
+            line-height: 20px;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            font-size: 20px;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+        &.checked + label.css-label {
+            background-position: 0 -20px;
+        }
+    }
+}
+label.css-label {
+    background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_acfe3070d6f00c8aed68866f9afa5470.png);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 2px;
+    top: 7px;
+}
+.todo-filter-tab-container {
+    font-size: 18px;
+    font-family: "Oswald";
+    background: rgba(117, 236, 255, 0.6);
+    display: block;
+    @include box-shadow(0px 0px 5px rgba(12, 11, 12, 0.8));
+    height: 45px;
+    margin: -6px auto 11px auto;
+    padding: 7px 0px;
+    @include border-radius(4px);
+}
+.todo-filter-tab-container, .todo-list {
+    @include user-select(none);
+    cursor: default;
+}
+.check-all-todos {
+    float: left;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    @include border-radius(5px);
+    width: 40px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 7px;
+    @include box-shadow(0px 0px 5px #000);
+    border: 2px solid;
+    border-color: rgb(230, 230, 230);
+    @include transition(all 0.3s ease 0s);
+}
+.complete-all-todos, .remove-all-todos, .todo-filter-tab {
+    background: rgba(0, 0, 0, 0.2);
+    @include border-radius(5px);
+    width: 40px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 7px;
+    @include box-shadow(0px 0px 5px #000);
+    border: 2px solid;
+    border-color: rgb(230, 230, 230);
+    @include transition(all 0.3s ease 0s);
+}
+.check-all-todos, .complete-all-todos, .remove-all-todos {
+    z-index: 2;
+}
+.check-remove-todos-container {
+    display: table;
+    width: 100%;
+    user-select: none;
+    div {
+        text-align: center;
+    }
+}
+.complete-all-todos {
+    float: left;
+    left: 12px;
+}
+.remove-all-todos {
+    float: left;
+    left: 16px;
+}
+.check-all-todos:hover, .complete-all-todos:hover, .remove-all-todos:hover, .todo-filter-tab:hover {
+    cursor: pointer;
+    @include box-shadow(none);
+}
+.animate-if {
+    &.ng-enter, &.ng-leave {
+        @include transition(all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s);
+    }
+}
+label.css-label {
+    &.ng-enter, &.ng-leave {
+        @include transition(all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s);
+    }
+}
+.animate-if {
+    &.ng-enter, &.ng-leave.ng-leave-active {
+        opacity: 0;
+    }
+}
+label.css-label {
+    &.ng-enter, &.ng-leave.ng-leave-active {
+        opacity: 0;
+    }
+}
+.animate-if {
+    &.ng-leave, &.ng-enter.ng-enter-active {
+        opacity: 1;
+    }
+}
+label.css-label {
+    &.ng-leave, &.ng-enter.ng-enter-active {
+        opacity: 1;
+    }
+}
+.todo-complete, .todo-remove {
+     @include transition(all linear 0.2s);
+}
+.todo-complete.ng-hide, .todo-remove.ng-hide {
+    opacity: 0;
+}
+.todo-filter-tab {
+    color: #fff;
+    width: auto!important;
+    padding: 0px 12px;
+}
+.todo-filter-tab.active {
+    color: $alternative-yellow;
+    background: $active-tab-bg;
+    border-color: $alternative-yellow;
+}
+.check-all-todos {
+    > i {
+        position: relative;
+    }
+}
+.count-of-todos {
+    font-size: 18px;
+    font-family: "Oswald";
+    color: #fff;
+    position: absolute;
+    padding: 0px 0px 5px 0px;
+    z-index: 1;
+    width: 100%;
+    > span {
+        color: rgb(67, 73, 73);
+        padding: 0px 3px;
+    }
+}

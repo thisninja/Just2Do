@@ -1,0 +1,503 @@
+/* text-align class shortcut */
+/* line 9, ../sass/style.scss */
+.t_a_c {
+  text-align: center;
+}
+
+/* line 12, ../sass/style.scss */
+body {
+  background: url("../../images/wood-texture.png") !important;
+  width: auto;
+  height: auto;
+}
+
+/* line 17, ../sass/style.scss */
+.pretty-header-container {
+  margin: 0px auto;
+  width: auto;
+  max-width: 800px;
+  height: auto;
+  background: rgba(0, 0, 0, 0.3);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0px 3px 5px 2px;
+  -webkit-box-shadow: 0px 3px 5px 2px;
+  box-shadow: 0px 3px 5px 2px;
+}
+
+/* line 26, ../sass/style.scss */
+.todo-list-container {
+  margin: 0px auto;
+  width: auto;
+  max-width: 800px;
+}
+
+/* line 31, ../sass/style.scss */
+.todo-remove {
+  margin: 0px;
+  width: 28px;
+  height: 26px;
+  border: 2px solid #ccc;
+  -moz-box-shadow: 0px 0px 5px #000;
+  -webkit-box-shadow: 0px 0px 5px #000;
+  box-shadow: 0px 0px 5px #000;
+  border-radius: 4px;
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  background: rgba(0, 0, 0, 0.4);
+  -moz-transition: box-shadow 0.2s ease-out;
+  -o-transition: box-shadow 0.2s ease-out;
+  -webkit-transition: box-shadow 0.2s ease-out;
+  transition: box-shadow 0.2s ease-out;
+}
+
+/* line 44, ../sass/style.scss */
+.todo-complete {
+  margin: 0px;
+  width: 28px;
+  height: 26px;
+  border: 2px solid #ccc;
+  -moz-box-shadow: 0px 0px 5px #000;
+  -webkit-box-shadow: 0px 0px 5px #000;
+  box-shadow: 0px 0px 5px #000;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  background: rgba(0, 0, 0, 0.4);
+  -moz-transition: box-shadow 0.2s ease-out;
+  -o-transition: box-shadow 0.2s ease-out;
+  -webkit-transition: box-shadow 0.2s ease-out;
+  transition: box-shadow 0.2s ease-out;
+  right: 42px !important;
+}
+/* line 57, ../sass/style.scss */
+.todo-complete > i {
+  left: 1px;
+}
+
+/* line 61, ../sass/style.scss */
+.todo-remove:hover, .todo-complete:hover {
+  cursor: pointer;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 66, ../sass/style.scss */
+.check-all-todos .remove-all-todos i {
+  font-size: 18px;
+}
+
+/* line 71, ../sass/style.scss */
+.todo-remove i, .todo-complete i {
+  color: #FFF;
+  font-size: 19px;
+  position: relative;
+  top: -7px;
+  left: 0px;
+}
+
+/* line 79, ../sass/style.scss */
+.todo-list {
+  position: relative;
+  min-height: 48px;
+  height: auto;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0px 0px 8px rgba(33, 33, 33, 0.7);
+  -webkit-box-shadow: 0px 0px 8px rgba(33, 33, 33, 0.7);
+  box-shadow: 0px 0px 8px rgba(33, 33, 33, 0.7);
+}
+
+/* line 88, ../sass/style.scss */
+.todo-item {
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  line-height: 37px;
+  border: 3px solid;
+  border-color: rgba(224, 216, 216, 0.2);
+  -moz-box-shadow: -1px 0px 5px #b4b4b4 inset;
+  -webkit-box-shadow: -1px 0px 5px #b4b4b4 inset;
+  box-shadow: -1px 0px 5px #b4b4b4 inset;
+  margin: 2px 6px;
+}
+/* line 97, ../sass/style.scss */
+.todo-item.completed {
+  background: rgba(245, 245, 245, 0.85);
+}
+/* line 100, ../sass/style.scss */
+.todo-item.first {
+  margin-top: 34px;
+}
+/* line 103, ../sass/style.scss */
+.todo-item > div {
+  outline: none;
+}
+
+/* line 107, ../sass/style.scss */
+.pretty-header {
+  font-family: "Oswald", Verdana, Helvetica, sans-serif;
+}
+
+/* line 110, ../sass/style.scss */
+.pretty-header {
+  text-align: center;
+  color: #99dbef;
+  text-shadow: 4px 1px 3px rgba(66, 66, 66, 0.5);
+}
+/* line 114, ../sass/style.scss */
+.pretty-header::selection {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 118, ../sass/style.scss */
+.delete-checkbox {
+  position: absolute;
+  width: 40px;
+  background: #99dbef;
+  margin-top: 12px !important;
+}
+/* line 123, ../sass/style.scss */
+.delete-checkbox > input {
+  margin: 0 auto;
+  position: relative;
+  left: 13px;
+  top: 0px;
+}
+
+/* line 130, ../sass/style.scss */
+input.add-todo {
+  margin: 15px 0px !important;
+  height: 37px !important;
+  background: rgba(0, 0, 0, 0.2) !important;
+  color: #FFF !important;
+  font-size: 18px !important;
+}
+
+/* .todo-item::before {
+    margin: 0px;
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 36px;
+    left: 0px;
+    top: 0px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background: rgb(153, 219, 239);
+    -webkit-box-shadow: -1px 0px 25px rgba(0,0,0,0.3) inset;
+    -moz-box-shadow: -1px 0px 25px rgba(0,0,0,0.3) inset;
+    -ms-box-shadow: -1px 0px 25px rgba(0,0,0,0.3) inset;
+    -o-box-shadow: -1px 0px 25px rgba(0,0,0,0.3) inset;
+    box-shadow: -1px 0px 25px rgba(0,0,0,0.3) inset;
+} */
+/* line 155, ../sass/style.scss */
+.todo {
+  -moz-user-select: text;
+  -ms-user-select: text;
+  -webkit-user-select: text;
+  user-select: text;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #5e5e5e;
+  padding-left: 50px;
+  display: inline-block;
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* line 168, ../sass/style.scss */
+.todo.completed {
+  text-decoration: line-through;
+  color: rgba(67, 61, 61, 0.7);
+  margin-left: -75px;
+}
+
+/* line 175, ../sass/style.scss */
+.todo-filter-tab .fa-list-alt, .todo-filter-tab .fa-check {
+  position: relative;
+  left: 3px;
+}
+
+/* line 180, ../sass/style.scss */
+.add-todo::selection, .todo::selection {
+  background: rgba(18, 233, 154, 0.5);
+}
+
+/* line 183, ../sass/style.scss */
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* line 188, ../sass/style.scss */
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+}
+
+/* line 194, ../sass/style.scss */
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+}
+
+/* line 200, ../sass/style.scss */
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* line 206, ../sass/style.scss */
+input[type="checkbox"] {
+  display: none;
+}
+/* line 209, ../sass/style.scss */
+input[type=checkbox].css-checkbox {
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+/* line 220, ../sass/style.scss */
+input[type=checkbox].css-checkbox + label.css-label {
+  padding-left: 25px;
+  height: 20px;
+  display: inline-block;
+  line-height: 20px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 20px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+/* line 231, ../sass/style.scss */
+input[type=checkbox].css-checkbox.checked + label.css-label {
+  background-position: 0 -20px;
+}
+
+/* line 236, ../sass/style.scss */
+label.css-label {
+  background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_acfe3070d6f00c8aed68866f9afa5470.png);
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 2px;
+  top: 7px;
+}
+
+/* line 244, ../sass/style.scss */
+.todo-filter-tab-container {
+  font-size: 18px;
+  font-family: "Oswald";
+  background: rgba(117, 236, 255, 0.6);
+  display: block;
+  -moz-box-shadow: 0px 0px 5px rgba(12, 11, 12, 0.8);
+  -webkit-box-shadow: 0px 0px 5px rgba(12, 11, 12, 0.8);
+  box-shadow: 0px 0px 5px rgba(12, 11, 12, 0.8);
+  height: 45px;
+  margin: -6px auto 11px auto;
+  padding: 7px 0px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 255, ../sass/style.scss */
+.todo-filter-tab-container, .todo-list {
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+/* line 259, ../sass/style.scss */
+.check-all-todos {
+  float: left;
+  left: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 40px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 7px;
+  -moz-box-shadow: 0px 0px 5px #000;
+  -webkit-box-shadow: 0px 0px 5px #000;
+  box-shadow: 0px 0px 5px #000;
+  border: 2px solid;
+  border-color: #e6e6e6;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.3s ease 0s;
+}
+
+/* line 273, ../sass/style.scss */
+.complete-all-todos, .remove-all-todos, .todo-filter-tab {
+  background: rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 40px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 7px;
+  -moz-box-shadow: 0px 0px 5px #000;
+  -webkit-box-shadow: 0px 0px 5px #000;
+  box-shadow: 0px 0px 5px #000;
+  border: 2px solid;
+  border-color: #e6e6e6;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.3s ease 0s;
+}
+
+/* line 285, ../sass/style.scss */
+.check-all-todos, .complete-all-todos, .remove-all-todos {
+  z-index: 2;
+}
+
+/* line 288, ../sass/style.scss */
+.check-remove-todos-container {
+  display: table;
+  width: 100%;
+  user-select: none;
+}
+/* line 292, ../sass/style.scss */
+.check-remove-todos-container div {
+  text-align: center;
+}
+
+/* line 296, ../sass/style.scss */
+.complete-all-todos {
+  float: left;
+  left: 12px;
+}
+
+/* line 300, ../sass/style.scss */
+.remove-all-todos {
+  float: left;
+  left: 16px;
+}
+
+/* line 304, ../sass/style.scss */
+.check-all-todos:hover, .complete-all-todos:hover, .remove-all-todos:hover, .todo-filter-tab:hover {
+  cursor: pointer;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 309, ../sass/style.scss */
+.animate-if.ng-enter, .animate-if.ng-leave {
+  -moz-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* line 314, ../sass/style.scss */
+label.css-label.ng-enter, label.css-label.ng-leave {
+  -moz-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* line 319, ../sass/style.scss */
+.animate-if.ng-enter, .animate-if.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+/* line 324, ../sass/style.scss */
+label.css-label.ng-enter, label.css-label.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+/* line 329, ../sass/style.scss */
+.animate-if.ng-leave, .animate-if.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+/* line 334, ../sass/style.scss */
+label.css-label.ng-leave, label.css-label.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+/* line 338, ../sass/style.scss */
+.todo-complete, .todo-remove {
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+/* line 341, ../sass/style.scss */
+.todo-complete.ng-hide, .todo-remove.ng-hide {
+  opacity: 0;
+}
+
+/* line 344, ../sass/style.scss */
+.todo-filter-tab {
+  color: #fff;
+  width: auto !important;
+  padding: 0px 12px;
+}
+
+/* line 349, ../sass/style.scss */
+.todo-filter-tab.active {
+  color: #F2FF82;
+  background: #0d3538;
+  border-color: #F2FF82;
+}
+
+/* line 355, ../sass/style.scss */
+.check-all-todos > i {
+  position: relative;
+}
+
+/* line 359, ../sass/style.scss */
+.count-of-todos {
+  font-size: 18px;
+  font-family: "Oswald";
+  color: #fff;
+  position: absolute;
+  padding: 0px 0px 5px 0px;
+  z-index: 1;
+  width: 100%;
+}
+/* line 367, ../sass/style.scss */
+.count-of-todos > span {
+  color: #434949;
+  padding: 0px 3px;
+}
