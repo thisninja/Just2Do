@@ -60,12 +60,12 @@
 
                     </div>
                     <div class="todo-item" ng-class="{'completed': isComplete, 'first': $first && isComplete}" data-ng-repeat="todo in todos  | filter: { done: isComplete } track by $index">
-                        <!-- <div ng-if="todo.checked && !isComplete && !todoObj.checkAll">
-                            <div class="todo-remove" data-ng-click="deleteTodo(todo._id); todo.checked = false" title="Delete the todo"><i class="fa fa-trash-o"></i>
-                            </div>
-                            <div class="todo-complete" data-ng-click="update(todo, true); todo.checked = false" title="Complete the todo"><i class="fa fa-check"></i>
-                            </div>
-                        </div> -->
+                        <!--                         <div ng-if="todo.checked && !isComplete && !todoObj.checkAll">
+    <div class="todo-remove" data-ng-click="deleteTodo(todo._id); todo.checked = false" title="Delete the todo"><i class="fa fa-trash-o"></i>
+    </div>
+    <div class="todo-complete" data-ng-click="update(todo, true); todo.checked = false" title="Complete the todo"><i class="fa fa-check"></i>
+    </div>
+</div> -->
                         <div ng-show="!isComplete">
                             <input type="checkbox" data-ng-class="(todo.checked)? 'checked': ''" id="niceCheck_{{$index}}" class="css-checkbox">
                             <label for="niceCheck_{{$index}}" data-ng-click="todo.checked = !todo.checked; checkTheTodos($index)" class="css-label"><span></span>&ensp;</label>
