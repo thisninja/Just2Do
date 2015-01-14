@@ -172,7 +172,6 @@ todoApp.directive('editOnDbclick', function($rootScope) {
         restrict: 'A',
         scope: false,
         link: function(scope, elem, attrs) {
-            console.log(scope.isReadonly);
             elem.bind('dblclick', function(e) {
                 scope.$parent.$parent.isReadonly = false;
                 attrs.$set("readonly", "false");
