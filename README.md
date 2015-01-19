@@ -5,4 +5,5 @@ Live demo on [heroku](http://node-todo-example.herokuapp.com/ "http://node-todo-
 
 TODO
 ========
-* Add authorization and mongo collection for each users to store their data separately
+* Add authorization and mongo collection for each user
+
