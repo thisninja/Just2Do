@@ -60,6 +60,7 @@
 
                     </div>
                     <div class="todo-item" ng-class="{'completed': isComplete, 'first': $first && isComplete}" data-ng-repeat="todo in todos  | filter: { done: isComplete } track by $index">
+                        // Old functionality which showed icons delete and complete for even todo in right corner of todo container
                         <!-- <div ng-if="todo.checked && !isComplete && !todoObj.checkAll">
                             <div class="todo-remove" data-ng-click="deleteTodo(todo._id); todo.checked = false" title="Delete the todo"><i class="fa fa-trash-o"></i>
                             </div>
@@ -70,7 +71,7 @@
                             <input type="checkbox" data-ng-class="(todo.checked)? 'checked': ''" id="niceCheck_{{$index}}" class="css-checkbox">
                             <label for="niceCheck_{{$index}}" data-ng-click="todo.checked = !todo.checked; checkTheTodos($index)" class="css-label"><span></span>&ensp;</label>
                         </div>
-                        <input class="todo" ng-class="(isComplete)? 'completed': ''" ng-readonly="todo != editable" ng-dblclick="doEditable(todo)" change-on-blur ng-model="todo.text" />
+                        <input class="todo" title="Double click to edit" ng-class="(isComplete)? 'completed': ''" ng-readonly="todo != editable" ng-dblclick="doEditable(todo)" change-on-blur ng-model="todo.text" />
                     </div>
                 </div>
             </div>
